@@ -1,21 +1,20 @@
 import './globals.css'
-import { ReactNode } from 'react'
-
-
+import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
 
 export const metadata = {
   title: "CoffeeLab",
   description: "Premium Coffee Experience",
-}
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
-        
+      <body className="bg-white">
+        <Navbar />
         {children}
-     
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
